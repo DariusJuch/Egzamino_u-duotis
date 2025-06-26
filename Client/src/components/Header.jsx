@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 
+
 const Header =() => {
   const navigate = useNavigate();
     const {isLoggedIn, user, logout} = useContext(AuthContext)
@@ -16,7 +17,7 @@ const Header =() => {
     <header className="bg-white shadow-md p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-xl font-bold text-blue-600">
-          AutoService
+          AutoDoctor
         </Link>
 
         <nav className="flex gap-6 items-center">
@@ -32,14 +33,14 @@ const Header =() => {
           </NavLink>
 
           <NavLink
-            to="/excursions"
+            to="/personal"
             className={({ isActive }) =>
               isActive
                 ? 'text-blue-600 font-semibold'
                 : 'text-gray-700 hover:text-blue-600'
             }
           >
-            Excursions
+            Services
           </NavLink>
 
           {!isLoggedIn ? (
