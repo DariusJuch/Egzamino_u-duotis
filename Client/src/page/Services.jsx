@@ -1,4 +1,4 @@
-const Excursions = () => {
+const Services = () => {
 
     return(
         <>
@@ -9,4 +9,4 @@ const Excursions = () => {
     )
 };
 
-export default Excursions;
+export default Services;
